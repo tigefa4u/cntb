@@ -78,11 +78,13 @@ Invoke-WebRequest -Uri 'https://api.contabo.com/v1/compute/instances' -Method 'G
 
 
 
+
    ```sh
    cntb config set-credentials --oauth2-clientid=<ClientId from Customer Control Panel> --oauth2-client-secret=<ClientSecret from Customer Control Panel> --oauth2-user=<API User from Customer Control Panel> --oauth2-password='<API Password from Customer Control Panel>'
    ```
 
 5. Use the CLI
+
 
 
 
@@ -147,8 +149,10 @@ If you need to allow other persons or automation scripts to access specific API 
 
 
 
+
    This allows you to specify a restriction to certain functions of an API by allowing control over POST (=Create), GET (=Read), PUT/PATCH (=Update) and DELETE (=Delete) methods for each API endpoint (URL) individually.
 * `resourcePermission`
+
 
 
 
@@ -294,7 +298,7 @@ Class | Method | HTTP request | Description
 *ImagesAuditsApi* | [**RetrieveImageAuditsList**](docs/ImagesAuditsApi.md#retrieveimageauditslist) | **Get** /v1/compute/images/audits | List history about your custom images (audit)
 *InstanceActionsApi* | [**Rescue**](docs/InstanceActionsApi.md#rescue) | **Post** /v1/compute/instances/{instanceId}/actions/rescue | Rescue a compute instance / resource identified by its id
 *InstanceActionsApi* | [**ResetPasswordAction**](docs/InstanceActionsApi.md#resetpasswordaction) | **Post** /v1/compute/instances/{instanceId}/actions/resetPassword | Reset password for a compute instance / resource referenced by an id
-*InstanceActionsApi* | [**Restart**](docs/InstanceActionsApi.md#restart) | **Post** /v1/compute/instances/{instanceId}/actions/restart | Retrieve a list of your custom images history.
+*InstanceActionsApi* | [**Restart**](docs/InstanceActionsApi.md#restart) | **Post** /v1/compute/instances/{instanceId}/actions/restart | Restart a compute instance / resource identified by its id.
 *InstanceActionsApi* | [**Shutdown**](docs/InstanceActionsApi.md#shutdown) | **Post** /v1/compute/instances/{instanceId}/actions/shutdown | Shutdown compute instance / resource by its id
 *InstanceActionsApi* | [**Start**](docs/InstanceActionsApi.md#start) | **Post** /v1/compute/instances/{instanceId}/actions/start | Start a compute instance / resource identified by its id
 *InstanceActionsApi* | [**Stop**](docs/InstanceActionsApi.md#stop) | **Post** /v1/compute/instances/{instanceId}/actions/stop | Stop compute instance / resource by its id
@@ -306,7 +310,7 @@ Class | Method | HTTP request | Description
 *InstancesApi* | [**RetrieveInstance**](docs/InstancesApi.md#retrieveinstance) | **Get** /v1/compute/instances/{instanceId} | Get specific instance by id
 *InstancesApi* | [**RetrieveInstancesList**](docs/InstancesApi.md#retrieveinstanceslist) | **Get** /v1/compute/instances | List instances
 *InstancesApi* | [**UpgradeInstance**](docs/InstancesApi.md#upgradeinstance) | **Post** /v1/compute/instances/{instanceId}/upgrade | Upgrading instance capabilities
-*InstancesAuditsApi* | [**RetrieveInstancesAuditsList**](docs/InstancesAuditsApi.md#retrieveinstancesauditslist) | **Get** /v1/compute/instances/audits | List history about your custom images (audit)
+*InstancesAuditsApi* | [**RetrieveInstancesAuditsList**](docs/InstancesAuditsApi.md#retrieveinstancesauditslist) | **Get** /v1/compute/instances/audits | List history about your instances (audit)
 *InternalApi* | [**CreateTicket**](docs/InternalApi.md#createticket) | **Post** /v1/create-ticket | Create a new support ticket
 *InternalApi* | [**RetrieveUserIsPasswordSet**](docs/InternalApi.md#retrieveuserispasswordset) | **Get** /v1/users/is-password-set | Get user is password set status
 *ObjectStoragesApi* | [**CancelObjectStorage**](docs/ObjectStoragesApi.md#cancelobjectstorage) | **Patch** /v1/object-storages/{objectStorageId}/cancel | Cancels the specified object storage at the next possible date
@@ -383,6 +387,7 @@ Class | Method | HTTP request | Description
  - [ApplicationRequirements](docs/ApplicationRequirements.md)
  - [ApplicationResponse](docs/ApplicationResponse.md)
  - [AssignInstancePrivateNetworkResponse](docs/AssignInstancePrivateNetworkResponse.md)
+ - [AssignedTagResponse](docs/AssignedTagResponse.md)
  - [AssignmentAuditResponse](docs/AssignmentAuditResponse.md)
  - [AssignmentResponse](docs/AssignmentResponse.md)
  - [AutoScalingTypeRequest](docs/AutoScalingTypeRequest.md)
@@ -532,7 +537,6 @@ Class | Method | HTTP request | Description
  - [TagAssignmentSelfLinks](docs/TagAssignmentSelfLinks.md)
  - [TagAuditResponse](docs/TagAuditResponse.md)
  - [TagResponse](docs/TagResponse.md)
- - [TagResponse1](docs/TagResponse1.md)
  - [UnassignInstancePrivateNetworkResponse](docs/UnassignInstancePrivateNetworkResponse.md)
  - [UpdateCustomImageRequest](docs/UpdateCustomImageRequest.md)
  - [UpdateCustomImageResponse](docs/UpdateCustomImageResponse.md)

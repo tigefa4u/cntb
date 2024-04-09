@@ -110,7 +110,7 @@ import (
 
 func main() {
     xRequestId := "04e0f898-37b4-48bc-a794-1a57abe6aa31" // string | [Uuid4](https://en.wikipedia.org/wiki/Universally_unique_identifier#Version_4_(random)) to identify individual requests for support cases. You can use [uuidgenerator](https://www.uuidgenerator.net/version4) to generate them manually.
-    createInstanceRequest := *openapiclient.NewCreateInstanceRequest("V3", int64(6)) // CreateInstanceRequest | 
+    createInstanceRequest := *openapiclient.NewCreateInstanceRequest(int64(6)) // CreateInstanceRequest | 
     xTraceId := "xTraceId_example" // string | Identifier to trace group of requests. (optional)
 
     configuration := openapiclient.NewConfiguration()
@@ -412,7 +412,7 @@ func main() {
     orderBy := []string{"Inner_example"} // []string | Specify fields and ordering (ASC for ascending, DESC for descending) in following format `field:ASC|DESC`. (optional)
     name := "vmd12345" // string | The name of the instance (optional)
     displayName := "myTestInstance" // string | The display name of the instance (optional)
-    dataCenter := "European Union (Germany) 1" // string | The data center of the instance (optional)
+    dataCenter := "European Union 1" // string | The data center of the instance (optional)
     region := "EU" // string | The Region of the instance (optional)
     instanceId := int64(100) // int64 | The identifier of the instance (deprecated) (optional)
     instanceIds := "100, 101, 102" // string | Comma separated instances identifiers (optional)

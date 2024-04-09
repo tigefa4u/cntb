@@ -1,5 +1,4 @@
 .gitignore
-.openapi-generator-ignore
 .travis.yml
 README.md
 api/openapi.yaml
@@ -37,6 +36,7 @@ docs/ApplicationConfig.md
 docs/ApplicationRequirements.md
 docs/ApplicationResponse.md
 docs/AssignInstancePrivateNetworkResponse.md
+docs/AssignedTagResponse.md
 docs/AssignmentAuditResponse.md
 docs/AssignmentResponse.md
 docs/AutoScalingTypeRequest.md
@@ -205,7 +205,6 @@ docs/TagAssignmentsApi.md
 docs/TagAssignmentsAuditsApi.md
 docs/TagAuditResponse.md
 docs/TagResponse.md
-docs/TagResponse1.md
 docs/TagsApi.md
 docs/TagsAuditsApi.md
 docs/UnassignInstancePrivateNetworkResponse.md
@@ -245,6 +244,7 @@ model_application_config.go
 model_application_requirements.go
 model_application_response.go
 model_assign_instance_private_network_response.go
+model_assigned_tag_response.go
 model_assignment_audit_response.go
 model_assignment_response.go
 model_auto_scaling_type_request.go
@@ -394,7 +394,6 @@ model_snapshots_audit_response.go
 model_tag_assignment_self_links.go
 model_tag_audit_response.go
 model_tag_response.go
-model_tag_response1.go
 model_unassign_instance_private_network_response.go
 model_update_custom_image_request.go
 model_update_custom_image_response.go
