@@ -26,16 +26,19 @@ Name | Type | Description | Notes
 **CancelDate** | **string** | The date on which the instance will be cancelled | 
 **Status** | [**InstanceStatus**](InstanceStatus.md) |  | 
 **VHostId** | **int64** | ID of host system | 
+**VHostNumber** | **int64** | Number of host system | 
+**VHostName** | **string** | Name of host system | 
 **AddOns** | [**[]AddOnResponse**](AddOnResponse.md) |  | 
 **ErrorMessage** | Pointer to **string** | Message in case of an error. | [optional] 
 **ProductType** | **string** | Instance&#39;s category depending on Product Id | 
+**ProductName** | **string** | Instance&#39;s Product Name | 
 **DefaultUser** | Pointer to **string** | Default user name created for login during (re-)installation with administrative privileges. Allowed values for Linux/BSD are &#x60;admin&#x60; (use sudo to apply administrative privileges like root) or &#x60;root&#x60;. Allowed values for Windows are &#x60;admin&#x60; (has administrative privileges like administrator) or &#x60;administrator&#x60;. | [optional] 
 
 ## Methods
 
 ### NewInstanceResponse
 
-`func NewInstanceResponse(tenantId string, customerId string, additionalIps []AdditionalIp, name string, displayName string, instanceId int64, dataCenter string, region string, regionName string, productId string, imageId string, ipConfig IpConfig, macAddress string, ramMb float32, cpuCores int64, osType string, diskMb float32, sshKeys []int64, createdDate time.Time, cancelDate string, status InstanceStatus, vHostId int64, addOns []AddOnResponse, productType string, ) *InstanceResponse`
+`func NewInstanceResponse(tenantId string, customerId string, additionalIps []AdditionalIp, name string, displayName string, instanceId int64, dataCenter string, region string, regionName string, productId string, imageId string, ipConfig IpConfig, macAddress string, ramMb float32, cpuCores int64, osType string, diskMb float32, sshKeys []int64, createdDate time.Time, cancelDate string, status InstanceStatus, vHostId int64, vHostNumber int64, vHostName string, addOns []AddOnResponse, productType string, productName string, ) *InstanceResponse`
 
 NewInstanceResponse instantiates a new InstanceResponse object
 This constructor will assign default values to properties that have it defined,
@@ -490,6 +493,46 @@ and a boolean to check if the value has been set.
 SetVHostId sets VHostId field to given value.
 
 
+### GetVHostNumber
+
+`func (o *InstanceResponse) GetVHostNumber() int64`
+
+GetVHostNumber returns the VHostNumber field if non-nil, zero value otherwise.
+
+### GetVHostNumberOk
+
+`func (o *InstanceResponse) GetVHostNumberOk() (*int64, bool)`
+
+GetVHostNumberOk returns a tuple with the VHostNumber field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVHostNumber
+
+`func (o *InstanceResponse) SetVHostNumber(v int64)`
+
+SetVHostNumber sets VHostNumber field to given value.
+
+
+### GetVHostName
+
+`func (o *InstanceResponse) GetVHostName() string`
+
+GetVHostName returns the VHostName field if non-nil, zero value otherwise.
+
+### GetVHostNameOk
+
+`func (o *InstanceResponse) GetVHostNameOk() (*string, bool)`
+
+GetVHostNameOk returns a tuple with the VHostName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVHostName
+
+`func (o *InstanceResponse) SetVHostName(v string)`
+
+SetVHostName sets VHostName field to given value.
+
+
 ### GetAddOns
 
 `func (o *InstanceResponse) GetAddOns() []AddOnResponse`
@@ -553,6 +596,26 @@ and a boolean to check if the value has been set.
 `func (o *InstanceResponse) SetProductType(v string)`
 
 SetProductType sets ProductType field to given value.
+
+
+### GetProductName
+
+`func (o *InstanceResponse) GetProductName() string`
+
+GetProductName returns the ProductName field if non-nil, zero value otherwise.
+
+### GetProductNameOk
+
+`func (o *InstanceResponse) GetProductNameOk() (*string, bool)`
+
+GetProductNameOk returns a tuple with the ProductName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProductName
+
+`func (o *InstanceResponse) SetProductName(v string)`
+
+SetProductName sets ProductName field to given value.
 
 
 ### GetDefaultUser

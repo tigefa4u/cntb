@@ -26,16 +26,19 @@ Name | Type | Description | Notes
 **CancelDate** | **string** | The date on which the instance will be cancelled | 
 **Status** | [**InstanceStatus**](InstanceStatus.md) |  | 
 **VHostId** | **int64** | ID of host system | 
+**VHostNumber** | **int64** | Number of host system | 
+**VHostName** | **string** | Name of host system | 
 **AddOns** | [**[]AddOnResponse**](AddOnResponse.md) |  | 
 **ErrorMessage** | Pointer to **string** | Message in case of an error. | [optional] 
 **ProductType** | **string** | Instance&#39;s category depending on Product Id | 
+**ProductName** | **string** | Instance&#39;s Product Name | 
 **DefaultUser** | Pointer to **string** | Default user name created for login during (re-)installation with administrative privileges. Allowed values for Linux/BSD are &#x60;admin&#x60; (use sudo to apply administrative privileges like root) or &#x60;root&#x60;. Allowed values for Windows are &#x60;admin&#x60; (has administrative privileges like administrator) or &#x60;administrator&#x60;. | [optional] 
 
 ## Methods
 
 ### NewListInstancesResponseData
 
-`func NewListInstancesResponseData(tenantId string, customerId string, additionalIps []AdditionalIp, name string, displayName string, instanceId int64, dataCenter string, region string, regionName string, productId string, imageId string, ipConfig IpConfig, macAddress string, ramMb float32, cpuCores int64, osType string, diskMb float32, sshKeys []int64, createdDate time.Time, cancelDate string, status InstanceStatus, vHostId int64, addOns []AddOnResponse, productType string, ) *ListInstancesResponseData`
+`func NewListInstancesResponseData(tenantId string, customerId string, additionalIps []AdditionalIp, name string, displayName string, instanceId int64, dataCenter string, region string, regionName string, productId string, imageId string, ipConfig IpConfig, macAddress string, ramMb float32, cpuCores int64, osType string, diskMb float32, sshKeys []int64, createdDate time.Time, cancelDate string, status InstanceStatus, vHostId int64, vHostNumber int64, vHostName string, addOns []AddOnResponse, productType string, productName string, ) *ListInstancesResponseData`
 
 NewListInstancesResponseData instantiates a new ListInstancesResponseData object
 This constructor will assign default values to properties that have it defined,
@@ -490,6 +493,46 @@ and a boolean to check if the value has been set.
 SetVHostId sets VHostId field to given value.
 
 
+### GetVHostNumber
+
+`func (o *ListInstancesResponseData) GetVHostNumber() int64`
+
+GetVHostNumber returns the VHostNumber field if non-nil, zero value otherwise.
+
+### GetVHostNumberOk
+
+`func (o *ListInstancesResponseData) GetVHostNumberOk() (*int64, bool)`
+
+GetVHostNumberOk returns a tuple with the VHostNumber field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVHostNumber
+
+`func (o *ListInstancesResponseData) SetVHostNumber(v int64)`
+
+SetVHostNumber sets VHostNumber field to given value.
+
+
+### GetVHostName
+
+`func (o *ListInstancesResponseData) GetVHostName() string`
+
+GetVHostName returns the VHostName field if non-nil, zero value otherwise.
+
+### GetVHostNameOk
+
+`func (o *ListInstancesResponseData) GetVHostNameOk() (*string, bool)`
+
+GetVHostNameOk returns a tuple with the VHostName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetVHostName
+
+`func (o *ListInstancesResponseData) SetVHostName(v string)`
+
+SetVHostName sets VHostName field to given value.
+
+
 ### GetAddOns
 
 `func (o *ListInstancesResponseData) GetAddOns() []AddOnResponse`
@@ -553,6 +596,26 @@ and a boolean to check if the value has been set.
 `func (o *ListInstancesResponseData) SetProductType(v string)`
 
 SetProductType sets ProductType field to given value.
+
+
+### GetProductName
+
+`func (o *ListInstancesResponseData) GetProductName() string`
+
+GetProductName returns the ProductName field if non-nil, zero value otherwise.
+
+### GetProductNameOk
+
+`func (o *ListInstancesResponseData) GetProductNameOk() (*string, bool)`
+
+GetProductNameOk returns a tuple with the ProductName field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetProductName
+
+`func (o *ListInstancesResponseData) SetProductName(v string)`
+
+SetProductName sets ProductName field to given value.
 
 
 ### GetDefaultUser
